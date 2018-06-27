@@ -24,7 +24,7 @@ while ($row = $sql->fetch_assoc()){
 <p>Ingredient:
 <select name="ingredient">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT Name FROM Ingredient");
 while ($row = $sql->fetch_assoc()){

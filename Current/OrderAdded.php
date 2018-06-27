@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
                 
         $query = "INSERT INTO CustOrder (`OrderID`, `CustomerID`, `EmpID`)
         	VALUES (NULL, ?, ?)";

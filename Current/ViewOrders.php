@@ -1,7 +1,7 @@
 <?php
  
 // Get a connection for the database
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 // Create a query for the database
 $query = "SELECT OrderID, Tip, TimePlaced, Status, SubTotal,
@@ -42,10 +42,11 @@ $row['TimePlaced'] . '</td><td align="left">' .
 $row['Status'] . '</td><td align="left">' . 
 $row['sfn'] . " " .  $row['sln'] . '</td><td align="left">' . 
 $row['cfn'] . " " .  $row['cln'] . '</td><td align="left">' . 
-$row['SubTotal'] . '</td><td align="left">' . 
-($row['SubTotal'] * 0.06) . '</td><td align="left">' . 
-$row['Tip'] . '</td><td align="left">' . 
-($row['SubTotal'] * 1.06 + $row['CustOrder.Tip']) . '</td><td align="left">';
+money_format('$%i',$row['SubTotal']) . '</td><td align="left">' . 
+money_format('$%i',($row['SubTotal'] * 0.06)) . '</td><td align="left">' . 
+money_format('$%i',$row['Tip']) . '</td><td align="left">' . 
+money_format('$%i',($row['SubTotal'] * 1.06 + $row['Tip']))
+. '</td><td align="left">';
 
 echo '</tr>';
 }

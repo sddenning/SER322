@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
         
         $query = "INSERT INTO MenuItem (`ItemID`, `Name`, `Size`, `Cost`,
         	`AgeRestriction`) VALUES (NULL, ?, ?, ?, ?)";
@@ -112,7 +112,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/SER322/project/current/ItemAdded.php" method="post">
+<form action="ItemAdded.php" method="post">
 
 <b>Add a New Menu Item</b>
 

@@ -119,7 +119,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
         
         $query = "INSERT INTO Customer (`CustomerID`, `email`, `FirstName`, `LastName`,
 			`DOB`, `TableNo`, `Street`, `City`, `State`, `Zip`) VALUES (NULL, ?, ?, ?,
@@ -142,7 +142,7 @@ if(isset($_POST['submit'])){
         
         if($affected_rows == 1){
             
-            echo 'Student Entered';
+            echo 'Customer Entered';
             
             mysqli_stmt_close($stmt);
             
@@ -175,7 +175,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/SER322/project/current/CustAdded.php" method="post">
+<form action="CustAdded.php" method="post">
     
 <b>Add a New Customer</b>
 

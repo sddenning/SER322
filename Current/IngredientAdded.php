@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
         
         $query = "INSERT INTO Ingredient (`Name`, `Supplier`, `Cost`, `Inventory`)
         	VALUES (?, ?, ?, ?)";
@@ -113,7 +113,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/SER322/project/current/IngredientAdded.php" method="post">
+<form action="IngredientAdded.php" method="post">
 
 <b>Add an Ingredient</b>
 

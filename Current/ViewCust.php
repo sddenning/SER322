@@ -1,7 +1,7 @@
 <?php
  
 // Get a connection for the database
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 // Create a query for the database
 $query = "SELECT FirstName, LastName, email, Street, City, State, Zip,

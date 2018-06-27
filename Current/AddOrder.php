@@ -3,14 +3,14 @@
 <title>Create Order</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/OrderAdded.php" method="post">
+<form action="OrderAdded.php" method="post">
 
 <b>Create Order</b>
 
 <p>Customer:
 <select name="customer">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT FirstName, LastName, email, CustomerID FROM Customer");
 while ($row = $sql->fetch_assoc()){
@@ -24,7 +24,7 @@ while ($row = $sql->fetch_assoc()){
 <p>Server:
 <select name="server">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT EmpID FROM Server");
 while ($row = $sql->fetch_assoc()){

@@ -3,14 +3,14 @@
 <title>Update Table Number</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/TableUpdated.php" method="post">
+<form action="TableUpdated.php" method="post">
 
 <b>Update Table</b>
 
 <p>Customer:
 <select name="customer">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT FirstName, LastName, email, CustomerID FROM Customer");
 while ($row = $sql->fetch_assoc()){

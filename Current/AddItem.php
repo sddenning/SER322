@@ -3,7 +3,7 @@
 <title>Add Menu Item</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/ItemAdded.php" method="post">
+<form action="ItemAdded.php" method="post">
 
 <b>Add a New Menu Item</b>
 

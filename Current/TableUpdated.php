@@ -32,14 +32,12 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
                 
         $query = "UPDATE Customer
         		  SET TableNo = " . $table1 . 
         	    " WHERE CustomerID = " . $cust;
         	    
-        echo $query . "<br/>";
-        			        			
         $sql = mysqli_query($dbc, $query);
                 
         //i Integers

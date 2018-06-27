@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
         
         $query = "INSERT INTO Server (`EmpID`, `FirstName`, `LastName`, `SSN`,
         	`Wages`, `Tips`) VALUES (NULL, ?, ?, ?, ?, ?)";
@@ -125,7 +125,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/SER322/project/current/EmpAdded.php" method="post">
+<form action="EmpAdded.php" method="post">
 
 <b>Add a New Employee</b>
 

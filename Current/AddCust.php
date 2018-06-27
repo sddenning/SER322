@@ -3,7 +3,7 @@
 <title>Add Customer</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/CustAdded.php" method="post">
+<form action="CustAdded.php" method="post">
 
 <b>Add a New Customer</b>
 

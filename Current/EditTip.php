@@ -3,14 +3,14 @@
 <title>Add Item to Order</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/TipChanged.php" method="post">
+<form action="TipChanged.php" method="post">
 
 <b>Add Ingredient to Menu Item</b>
 
 <p>Menu Item:
 <select name="orderno">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT CustOrder.OrderID AS a, Customer.FirstName AS b,
 								  Customer.LastName AS c, Customer.TableNo AS d,

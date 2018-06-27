@@ -3,14 +3,14 @@
 <title>Add Item to Order</title>
 </head>
 <body>
-<form action="http://localhost/SER322/project/current/ItemAddedToOrder.php" method="post">
+<form action="ItemAddedToOrder.php" method="post">
 
 <b>Add Ingredient to Menu Item</b>
 
-<p>Menu Item:
+<p>Order:
 <select name="orderno">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT CustOrder.OrderID AS a, Customer.FirstName AS b,
 								  Customer.LastName AS c, Customer.TableNo AS d
@@ -29,7 +29,7 @@ while ($row = $sql->fetch_assoc()){
 <p>Item:
 <select name="item">
 <?php
-require_once('../../../mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $sql = mysqli_query($dbc, "SELECT Name, Size, ItemID FROM MenuItem");
 while ($row = $sql->fetch_assoc()){

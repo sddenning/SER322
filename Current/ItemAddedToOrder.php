@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../../../mysqli_connect.php');
+        require_once('mysqli_connect.php');
                 
         $query = "INSERT INTO Contains (`OrderID`, `ItemID`, `Quantity`, `Notes`)
         	VALUES (?, ?, ?, ?)";
@@ -88,9 +88,7 @@ if(isset($_POST['submit'])){
         	$query = "UPDATE CustOrder
         			  SET SubTotal = SubTotal + " . ($price * $quant) . 
         			" WHERE OrderID = " . $order;
-        			
-        	echo $query . "<br/>";
-        			
+            			
         	$sql = mysqli_query($dbc, $query);
         	           
             echo 'Item Entered';
